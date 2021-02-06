@@ -180,7 +180,8 @@
           "size": "3095631",
           "boards": [
             {
-              "name": "SAMD21"
+              "name": "SAMD21",
+              "name": "SAMD21_No_Bootloader"
             }
           ],
           "toolsDependencies": [

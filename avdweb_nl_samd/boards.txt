@@ -54,3 +54,43 @@ sam15x15.build.pid=0x804d
 sam15x15.bootloader.tool=openocd
 sam15x15.menu.crystalsel.withoutcrystal.bootloader.file=zero/samd21_sam_ba_crystalless.bin
 sam15x15.menu.crystalsel.withcrystal.bootloader.file=zero/samd21_sam_ba.bin
+
+
+# SAM 15x15 (only native USB port)
+# --------------------------------------
+SAMD21_No_Bootloader.name=SAMD21 (No Bootloader)
+SAMD21_No_Bootloader.vid.0=0x2341
+SAMD21_No_Bootloader.pid.0=0x804d
+SAMD21_No_Bootloader.vid.1=0x2341
+SAMD21_No_Bootloader.pid.1=0x004d
+SAMD21_No_Bootloader.vid.2=0x2341
+SAMD21_No_Bootloader.pid.2=0x824d
+SAMD21_No_Bootloader.vid.3=0x2341
+SAMD21_No_Bootloader.pid.3=0x024d
+
+SAMD21_No_Bootloader.upload.tool=bossac
+SAMD21_No_Bootloader.upload.protocol=sam-ba
+SAMD21_No_Bootloader.upload.maximum_size=262144
+SAMD21_No_Bootloader.upload.maximum_data_size=32768
+SAMD21_No_Bootloader.upload.use_1200bps_touch=true
+SAMD21_No_Bootloader.upload.wait_for_upload_port=true
+SAMD21_No_Bootloader.upload.native_usb=true
+SAMD21_No_Bootloader.build.mcu=cortex-m0plus
+SAMD21_No_Bootloader.build.f_cpu=48000000L
+SAMD21_No_Bootloader.build.usb_product="Arduino Zero"
+SAMD21_No_Bootloader.build.usb_manufacturer="Arduino LLC"
+SAMD21_No_Bootloader.build.board=SAMD_ZERO
+SAMD21_No_Bootloader.build.core=arduino
+SAMD21_No_Bootloader.menu.crystalsel.withcrystal=With 32KHz Clock Crystal
+SAMD21_No_Bootloader.menu.crystalsel.withoutcrystal=Without Crystal
+SAMD21_No_Bootloader.menu.crystalsel.withoutcrystal.build.extra_flags=-DCRYSTALLESS -D__SAMD21G18A__ {build.usb_flags}
+SAMD21_No_Bootloader.menu.crystalsel.withcrystal.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags}
+SAMD21_No_Bootloader.build.ldscript=linker_scripts/gcc/flash_without_bootloader.ld"
+SAMD21_No_Bootloader.build.openocdscript=openocd_scripts/arduino_zero.cfg
+SAMD21_No_Bootloader.build.variant=sam15x15_d21
+SAMD21_No_Bootloader.build.variant_system_lib=
+SAMD21_No_Bootloader.build.vid=0x2341
+SAMD21_No_Bootloader.build.pid=0x804d
+SAMD21_No_Bootloader.bootloader.tool=openocd
+SAMD21_No_Bootloader.menu.crystalsel.withoutcrystal.bootloader.file=zero/samd21_sam_ba_crystalless.bin
+SAMD21_No_Bootloader.menu.crystalsel.withcrystal.bootloader.file=zero/samd21_sam_ba.bin
